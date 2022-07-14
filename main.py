@@ -24,7 +24,7 @@ for i in range(len(data_day)):
         bdp_name=data_name[i]
         bdp_email=data_email[i]
         new_letter_text=letter_text.replace("[NAME]",bdp_name)
-        with smtplib.SMTP("smtp.gmail.com") as connection:
+        with smtplib.SMTP("smtp.gmail.com") as connection: #<--here enter your smtp host address
             connection.starttls()
             connection.login(user=my_email,password=my_password)
             connection.sendmail(
